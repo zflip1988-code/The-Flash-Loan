@@ -11,7 +11,7 @@ RUN npm ci --ignore-scripts
 
 # Install bot deps
 COPY bot/package*.json ./bot/
-RUN cd bot && npm ci --ignore-scripts
+RUN cd bot && npm install --ignore-scripts
 
 # Copy source and compile
 COPY bot/ ./bot/
